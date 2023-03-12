@@ -1,0 +1,38 @@
+#include "main.h"
+
+MAINMENU MENU 
+{
+ POPUP "&File"
+ {
+  MENUITEM "&New", CM_FILE_NEW
+  MENUITEM "&Open...", CM_FILE_OPEN
+  MENUITEM "Save", CM_FILE_SAVE
+  MENUITEM "Save &As...", CM_FILE_SAVEAS
+  MENUITEM SEPARATOR
+  MENUITEM "E&xit", CM_FILE_EXIT
+ }
+
+ POPUP "&Edit"
+ {
+  MENUITEM "Undo", CM_UNDO
+  MENUITEM "Redo", CM_REDO
+  MENUITEM SEPARATOR
+  MENUITEM "Cut", CM_CUT
+  MENUITEM "Copy", CM_COPY
+  MENUITEM "Paste", CM_PASTE
+ }
+ 
+ POPUP "&Format"
+ {
+  MENUITEM "Word &Warp", CM_WORDWARP
+  MENUITEM "F&ont...", CM_FONT
+ }
+ 
+ POPUP "&Help"
+ {
+  MENUITEM "View &Help", CM_VIEWHELP
+  MENUITEM SEPARATOR
+  MENUITEM "&About", CM_ABOUT
+ }
+}
+
