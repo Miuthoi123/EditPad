@@ -102,7 +102,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam) 
 		case WM_COMMAND:
 			switch(LOWORD(wParam)) {
 				case CM_FILE_NEW:
-					MessageBox (NULL, "test" , "test", 0);
+					DoFileOpenSave(hwnd, FALSE);
 					break;
 				case CM_FILE_OPEN:
 					DoFileOpenSave(hwnd, FALSE);
@@ -117,31 +117,31 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam) 
 					PostMessage(hwnd, WM_CLOSE, 0, 0);
 					break;
 				case CM_ABOUT:
-					MessageBox (NULL, "Editpad v1.0.0 Pre-Alpha DP (Developer Release).\nCreated by Miuthoi123, Created using C++" , "About EditPad", 0);
+					MessageBox (NULL, "Editpad v1 (DEMO VERSION ONLY, NOT A OFFICIAL RELEASE).\nCreated by Miuthoi123, Created using C++" , "About EditPad", 0);
 					break;
 				case CM_UNDO:
-					MessageBox (NULL, "test" , "test", 0);
+					MessageBox (NULL, "null" , "null", 0);
 					break;
 				case CM_REDO:
-					MessageBox (NULL, "test" , "test", 0);
+					MessageBox (NULL, "null" , "null", 0);
 					break;
 				case CM_CUT:
-					MessageBox (NULL, "test" , "test", 0);
+					MessageBox (NULL, "null" , "null", 0);
 					break;
 				case CM_COPY:
-					MessageBox (NULL, "test" , "test", 0);
+					MessageBox (NULL, "null" , "null", 0);
 					break;
 				case CM_PASTE:
-					MessageBox (NULL, "test" , "test", 0);
+					MessageBox (NULL, "null" , "null", 0);
 					break;
 				case CM_WORDWARP:
-					MessageBox (NULL, "test" , "test", 0);
+					MessageBox (NULL, "null" , "null", 0);
 					break;
 				case CM_FONT:
-					MessageBox (NULL, "test" , "test", 0);
+					MessageBox (NULL, "null" , "null", 0);
 					break;
 				case CM_VIEWHELP:
-					MessageBox (NULL, "test" , "test", 0);
+					MessageBox (NULL, "null" , "null", 0);
 					break;
 			}
 			break;
@@ -180,7 +180,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,LPSTR lpCmdLine,
 		return 0;
 	}
 
-	hwnd = CreateWindowEx(WS_EX_CLIENTEDGE,"WindowClass","Editpad v1.0.0 Pre-Alpha DP (Developer Release)",WS_OVERLAPPEDWINDOW,
+	hwnd = CreateWindowEx(WS_EX_CLIENTEDGE,"WindowClass","Editpad v1 (DEMO VERSION ONLY, NOT A OFFICIAL RELEASE)",WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT,
 		CW_USEDEFAULT,
 		640,480,
